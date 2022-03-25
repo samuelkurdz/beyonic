@@ -2,7 +2,7 @@
 
   <img class="py-7 px-4 w-auto" src="assets/logo.png" alt="">
 
-  <section class="">
+  <section class="w-full">
     <a *ngFor="let link of links" class="py-[14px] px-4 flex items-center gap-2 text-white hover:bg-[#002D45]" [routerLink]="link.route" routerLinkActive="active-link">
       <svg class="w-6 h-6">
         <use [attr.xlink:href]="link.iconLink"></use>

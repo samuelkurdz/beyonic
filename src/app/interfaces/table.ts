@@ -1,4 +1,5 @@
 export interface TableItem {
+  id: string;
   valueDate: string;
   transactionID: string;
   movementType: string;

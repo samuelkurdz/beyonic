@@ -5,6 +5,8 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TableComponent } from './components/table/table.component';
 import { TableControlsComponent } from './components/table-controls/table-controls.component';
+import { EditModalComponent } from './components/edit-modal/edit-modal.component';
+import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
 
 
 
@@ -13,7 +15,9 @@ import { TableControlsComponent } from './components/table-controls/table-contro
     DashboardComponent,
     SidebarComponent,
     TableComponent,
-    TableControlsComponent
+    TableControlsComponent,
+    EditModalComponent,
+    DeleteModalComponent
   ],
   imports: [
     CommonModule,
