@@ -7,6 +7,7 @@ import { TableComponent } from './components/table/table.component';
 import { TableControlsComponent } from './components/table-controls/table-controls.component';
 import { EditModalComponent } from './components/edit-modal/edit-modal.component';
 import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -21,7 +22,8 @@ import { DeleteModalComponent } from './components/delete-modal/delete-modal.com
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    FormsModule
   ]
 })
 export class DashboardModule { }

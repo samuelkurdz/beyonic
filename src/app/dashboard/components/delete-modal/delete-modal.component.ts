@@ -9,6 +9,7 @@ export class DeleteModalComponent implements OnInit {
 
   @Output() closeModal = new EventEmitter<string>();
   @Output() deleteConfirmation = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit(): void {

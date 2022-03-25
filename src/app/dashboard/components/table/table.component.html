@@ -2,7 +2,7 @@
   <beyonic-table-controls></beyonic-table-controls>
 
   <table class="w-full text-sm text-left text-gray-500">
-    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+    <thead class="text-xs text-gray-700 capitalize bg-gray-50">
       <tr>
         <th scope="col" class="p-4">
           <div class="flex items-center">
@@ -20,7 +20,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="bg-white hover:bg-gray-50" *ngFor="let item of tableValues">
+      <tr class="bg-white hover:bg-gray-50" *ngFor="let item of tableValues|async">
         <td class="w-4 p-4">
           <div class="flex items-center">
             <input
@@ -39,7 +39,7 @@
         <td class="px-6 py-4">{{item.status}}</td>
         <td class="px-6 py-4 text-right flex gap-3">
 
-          <svg (click)="triggerEditRow.emit(item.id)" class="cursor-pointer" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg (click)="triggerEditRow.emit(item)" class="cursor-pointer" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.44 3.35986H4.67C3.74768 3.35986 3 4.10755 3 5.02986V15.8999C3 16.3419 3.17626 16.7656 3.48973 17.0772C3.80321 17.3888 4.22801 17.5625 4.67 17.5599H15.53C15.972 17.5625 16.3968 17.3888 16.7103 17.0772C17.0237 16.7656 17.2 16.3419 17.2 15.8999V11.6999" stroke="#2F2F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M7.24018 13.27L7.18018 9.82L14.3402 2L17.5802 5.18L10.5202 13.27H7.24018Z" stroke="#2F2F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>

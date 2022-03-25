@@ -2,13 +2,46 @@
 <button id="myBtn">Open Modal</button>
 
 <div id="myModal" class="modal">
-  <div class="modal-content flex flex-col justify-between">
-
+  <div class="modal-content flex flex-col gap-9 justify-between">
     <div>
       <h3 class="text-base font-bold mb-5">Edit Row Information</h3>
 
-      <p>This Action cannot be undone</p>
-      <p>Do you want to continue?</p>
+      <form class="grid grid-cols-2 gap-6" #updateForm="ngForm">
+        <label class="block">
+          <span class="text-gray-700">Value Date</span>
+          <input
+            type="date"
+            required
+            name="valueDate"
+            [(ngModel)]="tableRow.valueDate"
+            class="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+          />
+        </label>
+        <label class="block">
+          <span class="text-gray-700">Movement type</span>
+          <input
+            type="text"
+            required
+            name="movementType"
+            [(ngModel)]="tableRow.movementType"
+            class="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+          />
+        </label>
+        <label class="block">
+          <span class="text-gray-700">Status</span>
+          <select
+            required
+            ngModel
+            name="status"
+            [(ngModel)]="tableRow.status"
+            class="form-control block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+          >
+            <option value="Active">Active</option>
+            <option value="Error">Error</option>
+            <option value="Hold">Hold</option>
+          </select>
+        </label>
+      </form>
     </div>
 
     <div class="modal-footer flex justify-end">
@@ -24,7 +57,7 @@
         data-modal-toggle="popup-modal"
         type="button"
         class="delete-button"
-        (click)="editConfirmation.emit()"
+        (click)="submitEditForm(updateForm)"
       >
         Save Changes
       </button>
