@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
   showDeleteModal = false;
 
   rowToDelete!: string;
+  rowToEdit!: string;
 
   constructor() { }
 
@@ -22,9 +23,19 @@ export class DashboardComponent implements OnInit {
     this.showDeleteModal = true;
   }
 
+  handleEditRow(rowId: string) {
+    this.rowToEdit = rowId;
+    this.showEditModal = true;
+  }
+
   handleRowDeletion() {
     console.log(this.rowToDelete);
     this.showDeleteModal = false;
+  }
+
+  handleEditDeletion() {
+    console.log(this.rowToEdit);
+    this.showEditModal = false;
   }
 
 }

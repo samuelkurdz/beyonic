@@ -38,6 +38,7 @@ export class TableComponent implements OnInit {
   ];
 
   @Output() triggerDeleteRow = new EventEmitter<string>();
+  @Output() triggerEditRow = new EventEmitter<string>();
 
   constructor() { }
 

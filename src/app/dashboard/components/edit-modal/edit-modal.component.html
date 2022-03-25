@@ -5,7 +5,7 @@
   <div class="modal-content flex flex-col justify-between">
 
     <div>
-      <h3 class="text-base font-bold mb-5">Delete Row?</h3>
+      <h3 class="text-base font-bold mb-5">Edit Row Information</h3>
 
       <p>This Action cannot be undone</p>
       <p>Do you want to continue?</p>
@@ -16,15 +16,17 @@
         data-modal-toggle="popup-modal"
         type="button"
         class="cancel-button"
+        (click)="closeModal.emit()"
       >
-        Yes, I'm sure
+        Cancel
       </button>
       <button
         data-modal-toggle="popup-modal"
         type="button"
         class="delete-button"
+        (click)="editConfirmation.emit()"
       >
-        Yes, I'm sure
+        Save Changes
       </button>
     </div>
   </div>
