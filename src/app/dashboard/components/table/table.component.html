@@ -1,0 +1,59 @@
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+  <beyonic-table-controls></beyonic-table-controls>
+
+  <table class="w-full text-sm text-left text-gray-500">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+      <tr>
+        <th scope="col" class="p-4">
+          <div class="flex items-center">
+            <input
+              id="checkbox-all-search"
+              type="checkbox"
+              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+            />
+            <label for="checkbox-all-search" class="sr-only">checkbox</label>
+          </div>
+        </th>
+        <th *ngFor="let item of tableHeaders" scope="col" class="px-6 py-3">
+          {{ item }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-white hover:bg-gray-50" *ngFor="let item of tableValues">
+        <td class="w-4 p-4">
+          <div class="flex items-center">
+            <input
+              id="checkbox-table-search-3" type="checkbox"
+              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+            />
+            <label for="checkbox-table-search-3" class="sr-only">
+              checkbox
+            </label>
+          </div>
+        </td>
+        <td class="px-6 py-4">{{item.valueDate}}</td>
+        <td class="px-6 py-4">{{item.transactionID}}</td>
+        <td class="px-6 py-4">{{item.movementType}}</td>
+        <td class="px-6 py-4">{{item.amount|number}}</td>
+        <td class="px-6 py-4">{{item.status}}</td>
+        <td class="px-6 py-4 text-right flex gap-3">
+
+          <svg class="cursor-pointer" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.44 3.35986H4.67C3.74768 3.35986 3 4.10755 3 5.02986V15.8999C3 16.3419 3.17626 16.7656 3.48973 17.0772C3.80321 17.3888 4.22801 17.5625 4.67 17.5599H15.53C15.972 17.5625 16.3968 17.3888 16.7103 17.0772C17.0237 16.7656 17.2 16.3419 17.2 15.8999V11.6999" stroke="#2F2F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.24018 13.27L7.18018 9.82L14.3402 2L17.5802 5.18L10.5202 13.27H7.24018Z" stroke="#2F2F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+            
+          <svg class="cursor-pointer" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.02002 5.06H16.98" stroke="#2F2F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.82984 5.06H15.4998C15.7705 5.06 15.9898 5.27938 15.9898 5.55V16.21C15.9898 17.0329 15.3227 17.7 14.4998 17.7H5.82984C5.00694 17.7 4.33984 17.0329 4.33984 16.21V5.55C4.33984 5.27938 4.55922 5.06 4.82984 5.06Z" stroke="#2F2F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.2802 1.5H8.05016C7.42055 1.5 6.91016 2.0104 6.91016 2.64V3.92C6.91016 4.5496 7.42055 5.06 8.05016 5.06H12.2802C12.9098 5.06 13.4202 4.5496 13.4202 3.92V2.64C13.4202 2.0104 12.9098 1.5 12.2802 1.5Z" stroke="#2F2F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8.2998 8.76999V13.99" stroke="#2F2F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.02 8.79001V14.01" stroke="#2F2F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+            
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
