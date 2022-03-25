@@ -1,0 +1,17 @@
+<aside class="bg-[#001F30] h-screen">
+
+  <img class="py-7 px-4" src="assets/logo.png" alt="">
+
+  <section class="">
+    <a *ngFor="let link of links" class="py-[14px] px-4 flex items-center gap-2 text-white hover:bg-[#002D45]" [routerLink]="link.route" routerLinkActive="active-link">
+      <svg class="w-6 h-6">
+        <use [attr.xlink:href]="link.iconLink"></use>
+      </svg>
+      <p class="text-sm font-bold">{{link.name}}</p>
+      
+      <svg *ngIf="link.hasChildren" class="ml-auto" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3532 7.13973C15.7288 7.54463 15.7051 8.17735 15.3002 8.55295L9.90823 13.5549L4.68745 8.54108C4.28911 8.15854 4.2763 7.5255 4.65885 7.12716C5.0414 6.72882 5.67444 6.71602 6.07278 7.09856L9.932 10.8048L13.94 7.0867C14.3449 6.71109 14.9776 6.73484 15.3532 7.13973Z" fill="white"/>
+        </svg>
+    </a>
+  </section>
+</aside>
