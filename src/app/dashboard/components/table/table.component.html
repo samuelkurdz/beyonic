@@ -36,7 +36,14 @@
         <td class="px-6 py-4">{{item.transactionID}}</td>
         <td class="px-6 py-4">{{item.movementType}}</td>
         <td class="px-6 py-4">{{item.amount|number}}</td>
-        <td class="px-6 py-4">{{item.status}}</td>
+        <td
+          class="px-6 py-4"
+          [ngClass]="{
+            'text-[#008F50]': item.status === 'Active',
+            'text-[#D90C34]' : item.status === 'Error',
+            'text-[#F06800]' : item.status === 'Hold' 
+          }"
+        >{{item.status}}</td>
         <td class="px-6 py-4 text-right flex gap-3">
 
           <svg (click)="triggerEditRow.emit(item)" class="cursor-pointer" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
