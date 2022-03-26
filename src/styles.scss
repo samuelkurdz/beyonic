@@ -5,5 +5,9 @@
 @import "tailwindcss/utilities";
 
 * {
-  font-family: 'Proxima Nova', sans-serif;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+input[type="text"], select {
+  @apply focus:outline-none focus:border-transparent focus:ring-0;
 }

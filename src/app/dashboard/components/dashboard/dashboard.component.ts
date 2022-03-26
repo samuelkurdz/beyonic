@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   showEditModal = false;
   showDeleteModal = false;
+  textHeader = '';
 
   rowToDelete!: string;
   rowToEdit!: TableItem;

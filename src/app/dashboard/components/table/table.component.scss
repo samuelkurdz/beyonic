@@ -1,0 +1,19 @@
+td {
+
+  .open {
+    display: block;
+  }
+
+  .close {
+    display: none;
+  }
+  &.amount-show {
+    .open {
+      display: none;
+    }
+  
+    .close {
+      display: block;
+    }
+  }
+}

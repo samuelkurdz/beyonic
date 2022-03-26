@@ -25,4 +25,7 @@ export class TableComponent implements OnInit {
     this.tableValues = this.dataStorage.currentData;
   }
 
+  amountToggle(event: HTMLSpanElement) {
+    event.parentElement?.classList.toggle('amount-show')
+  }
 }
